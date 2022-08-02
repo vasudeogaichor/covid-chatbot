@@ -304,6 +304,7 @@ scikit-learn==1.0.2
 scipy @ file:///C:/ci/scipy_1618856128765/work
 seaborn @ file:///tmp/build/80754af9/seaborn_1608578541026/work
 Send2Trash @ file:///tmp/build/80754af9/send2trash_1607525499227/work
+sentence-transformers==2.2.2
 sentencepiece==0.1.95
 simplegeneric==0.8.1
 singledispatch @ file:///tmp/build/80754af9/singledispatch_1614366001199/work
@@ -360,10 +361,12 @@ thinc==8.0.15
 threadpoolctl @ file:///tmp/tmp9twdgx9k/threadpoolctl-2.1.0-py3-none-any.whl
 three-merge @ file:///tmp/build/80754af9/three-merge_1607553261110/work
 tifffile @ file:///tmp/build/80754af9/tifffile_1619636090847/work
-tokenizers==0.10.3
+tokenizers==0.12.1
 toml @ file:///tmp/build/80754af9/toml_1616166611790/work
 tomli==2.0.1
 toolz @ file:///home/linux1/recipes/ci/toolz_1610987900194/work
+torch==1.12.0
+torchvision==0.13.0
 tornado @ file:///C:/ci/tornado_1606942392901/work
 tqdm @ file:///tmp/build/80754af9/tqdm_1615925068909/work
 traitlets @ file:///home/ktietz/src/ci/traitlets_1611929699868/work
