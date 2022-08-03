@@ -8,8 +8,8 @@ import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
 modelPath = "../models/sent_trans"
-# model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
-# model.save(modelPath)
+model = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
+model.save(modelPath)
 model = SentenceTransformer(modelPath)
 # print('model saved')
 def question_search(ques, embedding_df):
@@ -20,12 +20,11 @@ def question_search(ques, embedding_df):
     :return series
     """
 
-#     ques = [ques]
     sentence_embd = embedding_df["que_embd"].to_list()
 #     print(sentence_embd)
     question_embd = model.encode(ques, convert_to_tensor=True)
 #     print(question_embd)
-    #Compute cosine-similarities for each sentence with each other sentence
+#   Compute cosine-similarities for each sentence with each other sentence
     cosine_scores = util.cos_sim(sentence_embd, question_embd)
     embedding_df["score"] = [round(float(score),2) for score in cosine_scores] # remove decimal points
     result = embedding_df[embedding_df["score"]>=0.50]['Questions'].reset_index(drop=True)
